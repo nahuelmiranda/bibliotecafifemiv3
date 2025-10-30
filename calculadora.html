@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Calculadora de Multa - Biblioteca FIFEMI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1>Calculadora de Multa por Retraso</h1>
+        <form id="formCalc" class="row g-3">
+            <div class="col-md-4">
+                <label for="diasPrestamo" class="form-label">Días de préstamo</label>
+                <input type="number" min="1" id="diasPrestamo" class="form-control" required value="14">
+            </div>
+            <div class="col-md-4">
+                <label for="diasRetraso" class="form-label">Días de retraso</label>
+                <input type="number" min="0" id="diasRetraso" class="form-control" required value="0">
+            </div>
+            <div class="col-md-4">
+                <label for="multaDia" class="form-label">Multa por día (ARS)</label>
+                <input type="number" min="0" step="0.1" id="multaDia" class="form-control" required value="20">
+            </div>
+
+            <div class="col-12">
+                <button type="button" id="calcularBtn" class="btn btn-primary">Calcular</button>
+            </div>
+        </form>
+
+        <div class="mt-3">
+            <h4>Resultado</h4>
+            <div id="resultado">Ingrese valores y presione Calcular</div>
+        </div>
+    </div>
+
+    <script src="assets/js/calculadora.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
